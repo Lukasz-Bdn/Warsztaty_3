@@ -18,12 +18,12 @@
 			<td>Data dodania</td>
 			<td>Akcje</td>
 		</tr>
-		<c:forEach var="s" items="solutions">
+		<c:forEach var="s" items="${solutions}">
 			<tr>
-				<td>${s.title}</td>
-				<td>${s.autor}</td>
-				<td>${s.date}</td>
-				<td><a href='Solutions?id=${s.id}'>szczegoly</a></td>
+				<td>${s.solution.title}</td>
+				<td>${s.authorName}</td>
+				<td>${s.solution.submissionDate}</td>
+				<td><a href='Solutions?id=${s.solution.id}'>szczegoly</a></td>
 			</tr>
 		</c:forEach>
 
